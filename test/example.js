@@ -6,13 +6,12 @@ var fileName = __filename;
 // Test case 1
 var d1, d2;
 fs.readFile(fileName, function (err, data) {
+    // this is your reguar callback function
     if (err) {
         console.log("ERROR: " + err);
     }else{
-        d1 = (data.toString());
-        console.log("File read with length: " + d1.length);
+        console.log("File read with length: " + data.toString().length);
     }
-
 });
 
 var taskQueue = new TaskQueue();
@@ -22,8 +21,7 @@ taskQueue.addTask(function () {
         if (err) {
             console.log("ERROR: " + err);
         }else{
-            d2 = (data.toString());
-            console.log("File read with length: " + d2.length);
+            console.log("File read with length: " + data.toString().length);
         }
     }));
 });

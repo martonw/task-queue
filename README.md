@@ -12,8 +12,9 @@ want to call a service URL too frequently to avoid service overload.
 
 ## Installation
 
-Module is not (yet) available in npm, so you can download it from github and
-add a dependency to your package.json file.
+```
+npm install task-queue-async
+```
 
 ## Usage
 
@@ -97,4 +98,4 @@ It is _always_ expected that the function has a callback that is wrapped into
 a `this.wrapCallback()` call. See examples above.
 
 ### length()
-To check the length of the queue, you can always call taskQueue.length(). 
+To check the length of the queue, you can always call taskQueue.length().
